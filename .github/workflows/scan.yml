@@ -12,14 +12,14 @@ jobs:
       id-token: write      # allows authentication to Endor Labs using Actions OIDC JWT Token
       contents: read       # allows this job to clone org repos
     env:
-      GH_TOKEN: ${{ secrets.YOUR_GITHUB_PERSONAL_TOKEN }}  # Replace with your actual secret
+      GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Replace with your actual secret
       ENDOR_NAMESPACE: 'jeremy-prospects.dbt-labs'
       ENDOR_SCAN_SUMMARY_OUTPUT_TYPE: 'summary'
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          token: ${{ secrets.YOUR_GITHUB_PERSONAL_TOKEN }}
+          token: ${{ secrets.GH_TOKEN }}
 
       - name: Download Endorctl
         run: |
