@@ -15,6 +15,7 @@ jobs:
       GH_TOKEN: ${{ secrets.GH_TOKEN }}  # Replace with your actual secret
       ENDOR_NAMESPACE: 'jeremy-prospects.dbt-labs'
       ENDOR_SCAN_SUMMARY_OUTPUT_TYPE: 'summary'
+      ENDOR_GITHUB_ACTION_TOKEN_ENABLE: "true"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
