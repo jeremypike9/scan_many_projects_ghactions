@@ -13,7 +13,7 @@ jobs:
       contents: read       # allows this job to clone org repos
     env:
       GH_TOKEN: ${{ secrets.YOUR_GITHUB_PERSONAL_TOKEN }}  # Replace with your actual secret
-      ENDOR_NAMESPACE: 'arsalan-learn'
+      ENDOR_NAMESPACE: 'jeremy-prospects.dbt-labs'
       ENDOR_SCAN_SUMMARY_OUTPUT_TYPE: 'summary'
     steps:
       - name: Checkout repository
